@@ -147,8 +147,8 @@ struct GlassBackground: NSViewRepresentable {
         // Base glass layer with strong blur
         let baseGlassView = NSVisualEffectView()
         baseGlassView.material = material
-        baseGlassView.blendingMode = .behindWindow
-        baseGlassView.state = .active
+        baseGlassView.blendingMode = .withinWindow
+        baseGlassView.state = .inactive
         baseGlassView.wantsLayer = true
 
         // Edge lighting layer (disabled - using single clean edge)

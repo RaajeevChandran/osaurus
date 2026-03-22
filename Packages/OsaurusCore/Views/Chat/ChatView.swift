@@ -1505,12 +1505,9 @@ struct ChatView: View {
 
             // Layer 2: Glass effect (if enabled)
             if theme.glassEnabled {
-                ThemedGlassSurface(
-                    cornerRadius: 24,
-                    topLeadingRadius: windowState.showSidebar ? 0 : nil,
-                    bottomLeadingRadius: windowState.showSidebar ? 0 : nil
-                )
-                .allowsHitTesting(false)
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                        .fill(theme.primaryBackground.opacity(theme.windowBackingOpacity))
+                        .allowsHitTesting(false)
 
                 // Solid backing scaled by glass opacity so low values produce real transparency
                 let baseBacking = theme.windowBackingOpacity
