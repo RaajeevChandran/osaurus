@@ -470,7 +470,6 @@ public final class ChatWindowManager: NSObject, ObservableObject {
         panel.hidesOnDeactivate = false
         panel.worksWhenModal = true
         panel.isReleasedWhenClosed = false
-        panel.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
 
         panel.titleVisibility = .hidden
         panel.titlebarAppearsTransparent = true
